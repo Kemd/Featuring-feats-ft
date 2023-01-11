@@ -1,7 +1,7 @@
 import './App.css';
 import { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import useFetch from 'react-fetch-hook';
+// import useFetch from 'react-fetch-hook';
 import Home from './pages/Home';
 
 

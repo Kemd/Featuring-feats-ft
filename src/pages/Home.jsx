@@ -1,12 +1,14 @@
-import { useState, useEffect } from "react";
-
 const Home = ({ games }) => {
     const loaded = () => {
         return games.map(game => (
-            <div>
+            <>
                 <h3>{game.title}</h3>
-            </div>
-        ))
+                <img src={game.thumbnail} alt={game.title} />
+                <p>{game.short_description}</p>
+                <br />
+                <hr />
+            </>
+            ))
     }
     const loading = () => {
         return <h1>Loading ...</h1>
