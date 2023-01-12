@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 // import useFetch from 'react-fetch-hook';
 import Home from './pages/Home';
+import Nav from './Components/Navigation';
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
     <div className="App">
         {/* homepage displays the games */}
       <Routes>
+        <Nav />
         <Route exact path='/' element={<Home games={games} />}/>
 
       </Routes>
