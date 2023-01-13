@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 // import useFetch from 'react-fetch-hook';
 import Home from './pages/Home';
 import Nav from './Components/Navigation';
+import About from "./pages/About"
 
 
 function App() {
@@ -34,12 +35,13 @@ function App() {
     useEffect(() => getApi, [])
 
   return (
-    <div className="App">
+    <div className="App container">
         {/* homepage displays the games */}
       <Nav />
       <Routes>
         <Route exact path='/' element={<Home games={games} />}/>
-        <Route path="/about" element={About} />
+        <Route path="/about" element={<About />} />
+
 
       </Routes>
 
