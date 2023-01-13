@@ -36,9 +36,10 @@ function App() {
   return (
     <div className="App">
         {/* homepage displays the games */}
+      <Nav />
       <Routes>
-        <Nav />
         <Route exact path='/' element={<Home games={games} />}/>
+        <Route path="/about" element={About} />
 
       </Routes>
 
