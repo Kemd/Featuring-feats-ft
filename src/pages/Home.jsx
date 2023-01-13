@@ -1,13 +1,19 @@
+import "bootstrap/dist/css/bootstrap.min.css"
+
 const Home = ({ games }) => {
     const loaded = () => {
         return games.map(game => (
-            <>
-                <h3>{game.title}</h3>
-                <img src={game.thumbnail} alt={game.title} />
-                <p>{game.short_description}</p>
-                <br />
-                <hr />
-            </>
+            <div className="container text-center">
+                <div className="row row-cols-2">
+                    <div className="col">
+                        <h3>{game.title}</h3>
+                        <img src={game.thumbnail} alt={game.title} />
+                        <p>{game.short_description}</p>
+                        <br />
+                        <hr />
+                    </div>
+                </div>
+            </div>
             ))
     }
     const loading = () => {
