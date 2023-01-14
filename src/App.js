@@ -16,7 +16,7 @@ function App() {
 
   const [games, setGames] = useState([])
   const [currentPage, setCurrentPage] = useState(1)
-  const [gamesPerPage, setGamesPerPage] = useState(10)
+  const [gamesPerPage, setGamesPerPage] = useState(9)
 
   useEffect(() => {
     const options = {
@@ -70,7 +70,7 @@ function App() {
         {/* homepage displays the games */}
       <Navigation />
       <Routes>
-        <Route exact path='/' element={(
+        <Route path='/' element={(
           <>
             <Search />
             <Home games={currentGames} />
