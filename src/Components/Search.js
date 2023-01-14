@@ -1,4 +1,4 @@
-import Button from "react-bootstrap/Button"
+
 
 const Search = ({ searchQuery, setSearchQuery }) => {
     // const gameName = games
@@ -16,7 +16,7 @@ const Search = ({ searchQuery, setSearchQuery }) => {
                 placeholder="Searh for a game"
                 name="search" 
             />
-            <Button type="submit">Search</Button>
+            {/* <Button type="submit">Search</Button> */}
 
         </form>
         </>

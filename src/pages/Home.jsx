@@ -1,16 +1,20 @@
 // import "bootstrap/dist/css/bootstrap.min.css"
-// import Container from 'react-bootstrap/Container'
+import Container from 'react-bootstrap/Container'
 // import { Pagination } from "react-bootstrap"
 
 const Home = ({ games }) => {
     const loaded = () => {
         return games.map(game => (
-            <div>
-                <h3>{game.title}</h3>
-                <img src={game.thumbnail} alt={game.title} />
-                <p>{game.short_description}</p>
-                {/* <br />
-                <hr /> */}
+            <div key={game.id} className="game-container">
+                <div>
+                    <h3>{game.title}</h3>
+                </div>
+                <div>
+                    <img src={game.thumbnail} alt={game.title} />
+                </div>
+                <div>
+                    <p>{game.short_description}</p>
+                </div>
             </div>
             ))
     }

@@ -1,9 +1,10 @@
+// import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 import { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 // import useFetch from 'react-fetch-hook';
 import Home from './pages/Home';
-import Nav from './Components/Navigation';
+import Navigation from './Components/Navigation';
 import About from "./pages/About"
 import Search from './Components/Search';
 
@@ -37,9 +38,9 @@ function App() {
 
 
   return (
-    <div className="App container">
+    <div className='container text-center'>
         {/* homepage displays the games */}
-      <Nav />
+      <Navigation />
       <Routes>
         <Route exact path='/' element={(
           <>
