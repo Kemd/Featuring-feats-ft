@@ -7,13 +7,14 @@ import Home from './pages/Home';
 import Navigation from './Components/Navigation';
 import About from "./pages/About"
 import Search from './Components/Search';
+import Paginate from './Components/Paginate';
 
 
 function App() {
   // const url = 'https://free-to-play-games-database.p.rapidapi.com/api/filter?tag=3d.mmorpg.fantasy.pvp&platform=pc'
   const url = 'https://free-to-play-games-database.p.rapidapi.com/api/games'
 
-  const [games, setGames] = useState(null)
+  const [games, setGames] = useState([])
   const getApi = async () => {
     const options = {
 	    method: 'GET',
@@ -24,14 +25,8 @@ function App() {
     };
     const res = await fetch(url, options)
     const data = await res.json()
-    console.log(data)
+    // console.log(data)
     setGames(data)
-
-
-    // fetch(url, options)
-	  //   .then(response => response.json())
-	  //   .then(response => console.log(response))
-	  //   .catch(err => console.error(err));
     }
 
     useEffect(() => getApi, [])
@@ -46,6 +41,7 @@ function App() {
           <>
             <Search />
             <Home games={games} />
+            {/* <Paginate games={games} /> */}
           </>
         )}/>
         <Route path="/about" element={<About />} />
@@ -57,19 +53,3 @@ function App() {
 }
 
 export default App;
-
-// const options = {
-// 	method: 'GET',
-// 	headers: {
-// 		'X-RapidAPI-Key': 'c359a48fbemsh0ac08cd4d22fb0ap16fceajsnbbce31eb00d0',
-// 		'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
-// 	}
-// };
-
-// fetch('https://free-to-play-games-database.p.rapidapi.com/api/filter?tag=3d.mmorpg.fantasy.pvp&platform=pc', options)
-// 	.then(response => response.json())
-// 	.then(response => console.log(response))
-// 	.catch(err => console.error(err));
-
-
-// api https://www.freetogame.com/api/games
