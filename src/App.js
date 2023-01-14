@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Nav from './Components/Navigation';
 import About from "./pages/About"
+import Search from './Components/Search';
 
 
 function App() {
@@ -34,14 +35,19 @@ function App() {
 
     useEffect(() => getApi, [])
 
+
   return (
     <div className="App container">
         {/* homepage displays the games */}
       <Nav />
       <Routes>
-        <Route exact path='/' element={<Home games={games} />}/>
+        <Route exact path='/' element={(
+          <>
+            <Search />
+            <Home games={games} />
+          </>
+        )}/>
         <Route path="/about" element={<About />} />
-
 
       </Routes>
 
