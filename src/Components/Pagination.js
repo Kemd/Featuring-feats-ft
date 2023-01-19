@@ -8,7 +8,7 @@ const Pagination = ({ gamesPerPage, totalGames, paginate}) => {
     }
 
     return (
-        <Nav>
+        <nav>
             <ul className="pagination">
                 {pageNum.map(num => (
                     <li key={num} className='page-item'>
@@ -18,7 +18,7 @@ const Pagination = ({ gamesPerPage, totalGames, paginate}) => {
                     </li>
                 ))}
             </ul>
-        </Nav>
+        </nav>
     )
 }
 

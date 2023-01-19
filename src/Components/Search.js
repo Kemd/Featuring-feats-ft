@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 
 const Search = ({ games, search, setSearch, allGames }) => {
@@ -27,9 +28,7 @@ const Search = ({ games, search, setSearch, allGames }) => {
     return (
 
         <>
-        <label htmlFor="search">
-            <span> Search game : </span>
-        </label>
+        <label htmlFor="search"></label>
         <input
             onChange={(e) => searchItems(e.target.value)}
             type="text"
@@ -46,12 +45,15 @@ const Search = ({ games, search, setSearch, allGames }) => {
 
                     {results.map((game) => {
                 // console.log(games)
-                        return <div key={game.id} className="col-sm-6 col-md-4 v my-2">
+                        return <div key={game.id} className="">
                             <div className="card" style={{ minHeight: 200 }}>
                                 <div className="card-body">
-                                    <img src={game.thumbnail} alt={game.title} />
-                                    <h3>{game.title}</h3>
-                                    <h5>Year: {game.release_date} Genre: {game.genre}</h5>
+                                    <header>
+                                        <img src={game.thumbnail} alt={game.title} />
+                                        <h3>{game.title}</h3>
+
+                                    </header>
+                                    <h6>Year: {game.release_date} Genre: {game.genre}</h6>
                                     {/* <p>{game.short_description}</p> */}
                                 </div>
                             </div>
@@ -67,10 +69,17 @@ const Search = ({ games, search, setSearch, allGames }) => {
                 // console.log(games)
                         return <div key={game.id} className="col-sm-6 col-md-4 v my-2">
                             <div className="card" style={{ minHeight: 200 }}>
-                                <div className="card-body">
-                                    <img src={game.thumbnail} alt={game.title} />
-                                    <h3>{game.title}</h3>
-                                    <h5>Year: {game.release_date} Genre: {game.genre}</h5>
+                                <div className="">
+                                    <header>
+                                    <Link to="#">
+                                        <img src={game.thumbnail} alt={game.title} />
+                                        <h3>{game.title}</h3>
+
+                                    </Link>
+                                    </header>
+                                    <footer>
+                                    <h6>Year: {game.release_date} Genre: {game.genre}</h6>
+                                    </footer>
                                     {/* <p>{game.short_description}</p> */}
                                 </div>
                             </div>
@@ -84,7 +93,7 @@ const Search = ({ games, search, setSearch, allGames }) => {
     )
 }
     const loading = () => {
-        return <h1>loading ...</h1>
+        return <button aria-busy='true'>loading ...</button>
     }
 
     return games ? loaded() : loading()

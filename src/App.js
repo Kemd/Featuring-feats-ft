@@ -49,7 +49,7 @@ function App() {
 
 
   return (
-    <div className='container text-center'>
+    <div className='container small'>
         {/* homepage displays the games */}
       <Navigation />
       <Routes>
