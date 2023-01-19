@@ -1,8 +1,7 @@
 import { useState } from "react"
 
 
-const Search = ({ games, search, setSearch, loaded, allGames }) => {
-    console.log(loaded)
+const Search = ({ games, search, setSearch, allGames }) => {
    
     // const [search, setSearch] = useState("")
     const [results, setResults] = useState([])
@@ -24,7 +23,9 @@ const Search = ({ games, search, setSearch, loaded, allGames }) => {
         }
     }
 
+    const loaded = () => {
     return (
+
         <>
         <label htmlFor="search">
             <span> Search game : </span>
@@ -81,6 +82,12 @@ const Search = ({ games, search, setSearch, loaded, allGames }) => {
             }
         </>
     )
+}
+    const loading = () => {
+        return <h1>loading ...</h1>
+    }
+
+    return games ? loaded() : loading()
 }
 
 export default Search
