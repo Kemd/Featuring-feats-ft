@@ -15,7 +15,7 @@ function App() {
 
   const [games, setGames] = useState([])
   const [currentPage, setCurrentPage] = useState(1)
-  const [gamesPerPage, setGamesPerPage] = useState(9)
+  const [gamesPerPage, setGamesPerPage] = useState(20)
   // const [searchTerm, setSearchTerm] = useState([])
   const [search, setSearch] = useState("")
   // const [results, setResults] = useState([])
