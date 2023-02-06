@@ -6,6 +6,7 @@ import Navigation from './Components/Navigation';
 import About from "./pages/About"
 import Search from './Components/Search';
 import Pagination from './Components/Pagination';
+import Show from './pages/Show';
 
 
 function App() {
@@ -49,11 +50,11 @@ function App() {
 
 
   return (
-    <div className='container small'>
+    <div className='container'>
         {/* homepage displays the games */}
       <Navigation />
       <Routes>
-        <Route path='/' element={(
+        <Route exact path='/' element={(
           <>
             <Search 
             allGames={games}
@@ -69,6 +70,7 @@ function App() {
           </>
         )}/>
         <Route path="/about" element={<About />} />
+        <Route path='/:id' element={<Show allGames={games} games={ currentGames } />} />
 
       </Routes>
 
