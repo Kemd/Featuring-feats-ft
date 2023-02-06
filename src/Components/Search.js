@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
+// import Show from "../pages/Show"
 
 
 const Search = ({ games, search, setSearch, allGames }) => {
@@ -71,7 +72,9 @@ const Search = ({ games, search, setSearch, allGames }) => {
                             <div className="card" style={{ minHeight: 200 }}>
                                 <div className="">
                                     <header>
-                                    <Link to="#">
+                                    <Link to={{
+                                        pathname: `/${game.id}`
+                                    }}>
                                         <img src={game.thumbnail} alt={game.title} />
                                         <h3>{game.title}</h3>
 
