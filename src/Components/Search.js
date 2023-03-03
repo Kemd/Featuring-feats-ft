@@ -72,9 +72,8 @@ const Search = ({ games, search, setSearch, allGames }) => {
                             <div className="card" style={{ minHeight: 200 }}>
                                 <div className="">
                                     <header>
-                                    <Link to={{
-                                        pathname: `/${game.id}`
-                                    }}>
+                                        {/* to={{pathname: `/${game.id}`}} */}
+                                    <Link>
                                         <img src={game.thumbnail} alt={game.title} />
                                         <h3>{game.title}</h3>
 
