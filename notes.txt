@@ -1,0 +1,26 @@
+import React from 'react'
+
+const Show = ({allGames, games}) => {
+  return (
+    <div>
+        {
+            allGames.map((game, index) => {
+                const { thumbmail, title, id, description, genre, release_date} = game
+
+                return (
+                    <div>
+                        <p>{thumbmail}</p>
+                        <p>{title}</p>
+                        <p>{id}</p>
+                        <p>{description}</p>
+                        <p>{genre}</p>
+                        <p>{release_date}</p>
+                    </div>
+                )
+            })
+        }
+    </div>
+  )
+}
+
+export default Show
