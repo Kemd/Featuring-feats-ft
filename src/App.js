@@ -70,7 +70,7 @@ function App() {
           </>
         )}/>
         <Route path="/about" element={<About />} />
-        {/* <Route path='/:id' element={<Show allGames={games} games={ currentGames } />} /> */}
+        <Route path='/:id' element={<Show allGames={games} games={ currentGames } />} />
 
       </Routes>
 
