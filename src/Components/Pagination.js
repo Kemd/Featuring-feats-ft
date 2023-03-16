@@ -11,9 +11,10 @@ const Pagination = ({ gamesPerPage, totalGames, paginate}) => {
             <ul className="pagination">
                 {pageNum.map(num => (
                     <li key={num} className='page-item'>
-                        <a onClick={() => paginate(num)} href='#' className="page-link">
+                        {/* used to be anchor tag  */}
+                        <button onClick={() => paginate(num)} className="page-link">
                             {num}
-                        </a>
+                        </button>
                     </li>
                 ))}
             </ul>
