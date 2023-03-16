@@ -4,3 +4,9 @@
 }
 
 .pagination a:hover:not(.active) {background-color: #ddd;} */
+
+.page-link {
+  /* border: solid 2px blue; */
+  width: fit-content;
+  border-radius: 15px;
+}
