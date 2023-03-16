@@ -1,4 +1,3 @@
-import {Nav} from 'react-bootstrap'
 
 const Pagination = ({ gamesPerPage, totalGames, paginate}) => {
     const pageNum = []
